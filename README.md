@@ -21,7 +21,7 @@ A project that forked LLVM focused on MSVC Compatibility.
 
 If you have any questions about how to compile Windows Driver by llvm-msvc.
 
-Please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues)
+Please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
 
 We want to use llvm-msvc as comfortable as msvc.
 
