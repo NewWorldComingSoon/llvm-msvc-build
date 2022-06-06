@@ -12,6 +12,8 @@ A project that forked LLVM focused on MSVC Compatibility.
 - SEH support.
 - Compatible with MSVC syntax as much as possible.
 - Windows Driver support.(Now only X64)
+- Intrinsic support.
+- Naked X64 inline asm support.
 
 ## How to use llvm-msvc?
 - Install Visual Studio 2015~2022(I suggest 2022) with WDK10.
