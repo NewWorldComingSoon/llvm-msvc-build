@@ -3,7 +3,7 @@
 # llvm-msvc-build
 Build llvm-msvc
 
-Current version : V1.5
+Current version : V1.6
 
 ## What's llvm-msvc?
 A project that forked LLVM focused on MSVC Compatibility.
