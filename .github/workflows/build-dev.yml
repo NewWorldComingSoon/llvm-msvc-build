@@ -1,0 +1,49 @@
+name: build
+
+concurrency:
+  group: build-${{ github.head_ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build llvm-msvc 
+    runs-on: windows-latest
+    steps:
+    - name: Install dependency
+      uses: crazy-max/ghaction-chocolatey@v1
+      with:
+        args: install cmake ninja vswhere
+
+    - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1
+      with:
+        sdk-version: 19041
+
+    - name: Build llvm
+      run: |
+        $vsPath = (vswhere -latest -property installationPath)
+        Import-Module (Join-Path $vsPath "Common7\Tools\Microsoft.VisualStudio.DevShell.dll")
+        Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -DevCmdArguments "-arch=x64 -host_arch=x64 -winsdk=10.0.19041.0"
+        $Env:CC = "clang-cl"
+        $Env:CXX = "clang-cl"
+        git clone --branch dev --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
+        cmake -Bbuild -GNinja -DCMAKE_SYSTEM_VERSION=10.0.19041.0 -DLLVM_USE_CRT_RELEASE=MT -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=ZIP "-DCMAKE_INSTALL_PREFIX=$pwd\\prefix" -DLLVM_TARGETS_TO_BUILD="X86;ARM;AArch64" -DLLVM_ENABLE_PROJECTS="clang;lld" llvm-msvc\\llvm
+        cmake --build build
+
+    - name: Package llvm
+      run: |
+        cmake --build build --target package
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: llvm-msvc
+        path: build/*.zip
+        retention-days: 5
