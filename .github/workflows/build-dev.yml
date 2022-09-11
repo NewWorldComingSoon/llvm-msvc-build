@@ -1,4 +1,4 @@
-name: build
+name: build-dev
 
 concurrency:
   group: build-${{ github.head_ref }}
