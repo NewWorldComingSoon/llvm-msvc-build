@@ -41,4 +41,3 @@ jobs:
       with:
         name: dev-merge-official-llvm
         path: build/*.zip
-        retention-days: 5
