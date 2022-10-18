@@ -10,7 +10,8 @@ A project that forked LLVM focused on MSVC Compatibility.
 
 ## Features:
 - SEH support.
-- Compatible with MSVC syntax as much as possible.
+- [Compatible with MSVC syntax as much as possible.](https://github.com/gmh5225/llvm-msvc-compatibility
+)
 - Windows Driver support.(Now only X64)
 - Intrinsic support.
 - Naked X64 inline asm support.
