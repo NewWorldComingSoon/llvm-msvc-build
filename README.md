@@ -13,7 +13,7 @@ A project that forked LLVM focused on MSVC Compatibility.
 - [Compatible with MSVC syntax as much as possible.](https://github.com/gmh5225/llvm-msvc-compatibility
 )
 - Windows Driver support.(Now only X64)
-- Intrinsic support.
+- [Intrinsic support.](https://github.com/gmh5225/LLVMIntrinsicRewrite)
 - Naked X64 inline asm support.
 
 ## How to use llvm-msvc?
