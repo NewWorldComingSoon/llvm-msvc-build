@@ -1,12 +1,13 @@
 [![build](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/build.yml)
 [![GitHub license](https://img.shields.io/github/license/NewWorldComingSoon/llvm-msvc-build)](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LICENSE)
+
 [![Github All Releases](https://img.shields.io/github/downloads/NewWorldComingSoon/llvm-msvc-build/total.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 [![Github Latest Release](https://img.shields.io/github/downloads/NewWorldComingSoon/llvm-msvc-build/latest/total.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 
+[![GitHub release](https://img.shields.io/github/release/NewWorldComingSoon/llvm-msvc-build.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
+
 # llvm-msvc-build
 Build llvm-msvc
-
-Current version : V1.6
 
 ## What's llvm-msvc?
 A project that forked LLVM focused on MSVC Compatibility.
