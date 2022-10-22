@@ -20,7 +20,7 @@ A project that forked LLVM focused on MSVC Compatibility.
 
 ## How to use llvm-msvc?
 - Install Visual Studio 2015~2022(I suggest 2022) with WDK11.
-- Install llvm-msvc in this repository (llvm-msvc_X86_64_installer.exe)
+- Install llvm-msvc in this repository ([llvm-msvc_X86_64_installer.exe](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases))
 - Create your windows driver project and select "LLVM-MSVC_v143_KernelMode" as your platform toolset.
 - Compile it.
 
