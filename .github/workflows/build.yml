@@ -1,4 +1,4 @@
-name: build
+name: release
 
 concurrency:
   group: build-${{ github.head_ref }}
@@ -28,7 +28,7 @@ jobs:
         Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -DevCmdArguments "-arch=x64 -host_arch=x64 -winsdk=10.0.19041.0"
         $Env:CC = "clang-cl"
         $Env:CXX = "clang-cl"
-        git clone --branch main --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
+        git clone --branch release --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
         cmake -Bbuild -GNinja -DCMAKE_SYSTEM_VERSION=10.0.19041.0 -DLLVM_USE_CRT_RELEASE=MT -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=ZIP "-DCMAKE_INSTALL_PREFIX=$pwd\\prefix" -DLLVM_TARGETS_TO_BUILD="X86;ARM;AArch64" -DLLVM_ENABLE_PROJECTS="clang;lld" llvm-msvc\\llvm
         cmake --build build
 
