@@ -8,7 +8,7 @@
 [![GitHub release](https://img.shields.io/github/release/NewWorldComingSoon/llvm-msvc-build.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 
 ## What's llvm-msvc?
-A project that forked LLVM focused on MSVC Compatibility.
+A [project](https://github.com/NewWorldComingSoon/llvm-msvc) that forked LLVM focused on MSVC Compatibility.
 
 ## Features:
 - SEH support.
