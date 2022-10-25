@@ -1,7 +1,7 @@
 
 # llvm-msvc-build
 
-[![build](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/build.yml)
+[![release](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/NewWorldComingSoon/llvm-msvc-build/actions/workflows/release.yml)
 [![GitHub license](https://img.shields.io/github/license/NewWorldComingSoon/llvm-msvc-build)](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LICENSE)
 
 [![Github All Releases](https://img.shields.io/github/downloads/NewWorldComingSoon/llvm-msvc-build/total.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
