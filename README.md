@@ -36,6 +36,9 @@ Here is an windows driver example: [[link]](https://github.com/gmh5225/LLVMWindo
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LLVMDriverTest.png)
 
+## Learning
+If you don't know how to learn LLVM, you can check out this [repository](https://github.com/gmh5225/awesome-llvm-security) of mine
+
 ## Some discussions on UnknownCheats
 https://www.unknowncheats.me/forum/general-programming-and-reversing/493547-using-llvm-msvc-compile-windows-driver.html
 
