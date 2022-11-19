@@ -15,11 +15,7 @@ jobs:
     - name: Install dependency
       uses: crazy-max/ghaction-chocolatey@v1
       with:
-        args: install cmake
-
-    - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1
-      with:
-        sdk-version: 19041
+        args: install cmake python
 
     - name: Build llvm
       run: |
