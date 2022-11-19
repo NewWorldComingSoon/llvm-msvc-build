@@ -26,8 +26,6 @@ jobs:
         $vsPath = (vswhere -latest -property installationPath)
         Import-Module (Join-Path $vsPath "Common7\Tools\Microsoft.VisualStudio.DevShell.dll")
         Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -DevCmdArguments "-arch=x64 -host_arch=x64 -winsdk=10.0.19041.0"
-        $Env:CC = "clang-cl"
-        $Env:CXX = "clang-cl"
         git clone --branch dev --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
         cmake -Bbuild -DCMAKE_SYSTEM_VERSION=10.0.19041.0 -DLLVM_ENABLE_LIBXML2=ON -DLLVM_USE_CRT_RELEASE=MT -DCMAKE_BUILD_TYPE=Release -DCMAKE_CONFIGURATION_TYPES="Release" -DCPACK_GENERATOR=ZIP "-DCMAKE_INSTALL_PREFIX=$pwd\\prefix" -DLLVM_TARGETS_TO_BUILD="X86;ARM;AArch64" -DLLVM_ENABLE_PROJECTS="clang;lld" llvm-msvc\\llvm
         cmake --build build
