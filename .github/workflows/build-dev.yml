@@ -32,7 +32,7 @@ jobs:
 
     - name: Package llvm
       run: |
-        cmake --build build --target package
+        cmake --build build --target package --config Release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
