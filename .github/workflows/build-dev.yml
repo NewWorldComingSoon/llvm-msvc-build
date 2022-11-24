@@ -8,11 +8,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        BUILD_CONFIGURATION: [release]
-        PLATFORM: [x64]
         os: [windows-2019]
     steps:
    
+    - name: Install ninja-build tool
+      uses: seanmiddleditch/gha-setup-ninja@v3
+    
+    - name: Enable Developer Command Prompt
+      uses: ilammy/msvc-dev-cmd@v1.7.0
+      
     - name: Build llvm
       run: |
         git clone --branch dev --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
