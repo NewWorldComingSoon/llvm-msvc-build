@@ -15,4 +15,4 @@ jobs:
    
     - name: Delete files
       run: |
-        rd C:/Strawberry
+        rd -recurse C:/Strawberry
