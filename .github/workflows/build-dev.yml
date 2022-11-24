@@ -1,4 +1,4 @@
-name: build-dev2
+name: build-dev
 
 on:
   workflow_dispatch
