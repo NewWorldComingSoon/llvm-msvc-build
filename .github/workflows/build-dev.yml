@@ -24,6 +24,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: NewWorldComingSoon/llvm-msvc
+        path: llvm-msvc
         
     - name: Build llvm
       run: |
