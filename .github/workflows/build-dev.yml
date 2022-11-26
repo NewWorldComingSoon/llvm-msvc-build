@@ -1,42 +1,43 @@
 name: build-dev
 
+concurrency:
+  group: build-${{ github.head_ref }}
+  cancel-in-progress: true
+
 on:
   workflow_dispatch
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-2019]
-    env:
-      BUILD_TYPE: Release
+    name: Build llvm-msvc 
+    runs-on: windows-latest
     steps:
-   
-    - name: Install ninja-build tool
-      uses: seanmiddleditch/gha-setup-ninja@v3
-    
-    - name: Enable Developer Command Prompt
-      uses: ilammy/msvc-dev-cmd@v1.7.0
-    
-    - name: Checkout NewWorldComingSoon
-      uses: actions/checkout@v3
+    - name: Install dependency
+      uses: crazy-max/ghaction-chocolatey@v1
       with:
-        repository: NewWorldComingSoon/llvm-msvc
-        path: llvm-msvc
-        
+        args: install cmake ninja vswhere
+
+    - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1
+      with:
+        sdk-version: 19041
+
     - name: Build llvm
       run: |
-        cmake -G "Visual Studio 16 2019" -A X64 -Bbuild -DLLVM_ENABLE_LIBXML2=ON -DCMAKE_MSVC_RUNTIME_LIBRARY="MultiThreaded" -DLLVM_USE_CRT_RELEASE=MT -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} -DCPACK_GENERATOR=ZIP "-DCMAKE_INSTALL_PREFIX=$pwd\\prefix" -DLLVM_TARGETS_TO_BUILD="X86;ARM;AArch64" -DLLVM_ENABLE_PROJECTS="clang;lld" llvm-msvc\\llvm
-        cmake --build build --config Release
+        $vsPath = (vswhere -latest -property installationPath)
+        Import-Module (Join-Path $vsPath "Common7\Tools\Microsoft.VisualStudio.DevShell.dll")
+        Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -DevCmdArguments "-arch=x64 -host_arch=x64 -winsdk=10.0.19041.0"
+        $Env:CC = "clang-cl"
+        $Env:CXX = "clang-cl"
+        git clone --branch dev --depth 1 https://github.com/NewWorldComingSoon/llvm-msvc
+        cmake -Bbuild -GNinja -DCMAKE_SYSTEM_VERSION=10.0.19041.0 -DLLVM_ENABLE_LIBXML2=ON -DLLVM_USE_CRT_RELEASE=MT -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=ZIP "-DCMAKE_INSTALL_PREFIX=$pwd\\prefix" -DLLVM_TARGETS_TO_BUILD="X86;ARM;AArch64" -DLLVM_ENABLE_PROJECTS="clang;lld" llvm-msvc\\llvm
+        cmake --build build
 
     - name: Package llvm
       run: |
-        cmake --build build --target package --config Release
+        cmake --build build --target package
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: llvm-msvc
+        name: dev
         path: build/*.zip
