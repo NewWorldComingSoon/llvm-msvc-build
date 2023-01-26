@@ -34,7 +34,7 @@ We want to use llvm-msvc as comfortable as msvc.
 
 Thank you
 
-Here is an windows driver example: [[link]](https://github.com/gmh5225/LLVMWindowsDriverTest)
+Here is a windows driver example: [[link]](https://github.com/gmh5225/LLVMWindowsDriverTest)
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LLVMDriverTest.png)
 
