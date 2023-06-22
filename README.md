@@ -36,6 +36,12 @@ Here is a windows driver example: [[link]](https://github.com/gmh5225/LLVMWindow
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LLVMDriverTest.png)
 
+Here is a simple cmkr windows driver template: [[link]](https://github.com/NewWorldComingSoon/llvm-msvc-windows-driver-template)
+```
+cmake -Bbuild -TLLVM-MSVC_v143 -DCMAKE_WIN64_DRIVER=1
+cmake --build build --config Release
+```
+
 ## Learning
 If you don't know how to learn LLVM, you can check out this [repository](https://github.com/gmh5225/awesome-llvm-security) of mine
 
