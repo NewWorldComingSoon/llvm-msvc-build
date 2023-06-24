@@ -36,14 +36,9 @@ cmake --build build --config Release
 ```
 
 ## Learning
-If you don't know how to learn LLVM, you can check out this [repository](https://github.com/gmh5225/awesome-llvm-security) of mine
+If you don't know how to learn LLVM, you can check out this [repository](https://github.com/gmh5225/awesome-llvm-security) of mine.
 
 ## Issues
-If you have any questions about how to use llvm-msvc.
-
-Please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
-
-We want to use llvm-msvc as comfortable as msvc.
-Thank you
+If you have any questions, please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
 
 
