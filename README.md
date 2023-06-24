@@ -24,14 +24,7 @@ Because there are more hacky operations, a lot of code can not be submitted dire
 - Create your windows driver project and select "LLVM-MSVC_v143_KernelMode" as your platform toolset.
 - Compile it.
 
-If you have any questions about how to compile Windows Driver by llvm-msvc.
-
-Please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
-
-We want to use llvm-msvc as comfortable as msvc.
-
-Thank you
-
+## Project template
 Here is a windows driver example: [[link]](https://github.com/gmh5225/LLVMWindowsDriverTest)
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LLVMDriverTest.png)
@@ -45,6 +38,12 @@ cmake --build build --config Release
 ## Learning
 If you don't know how to learn LLVM, you can check out this [repository](https://github.com/gmh5225/awesome-llvm-security) of mine
 
-## Some discussions on UnknownCheats
-https://www.unknowncheats.me/forum/general-programming-and-reversing/493547-using-llvm-msvc-compile-windows-driver.html
+## Issues
+If you have any questions about how to use llvm-msvc.
+
+Please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
+
+We want to use llvm-msvc as comfortable as msvc.
+Thank you
+
 
