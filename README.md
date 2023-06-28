@@ -25,12 +25,12 @@ Because there are more hacky operations, a lot of code can not be submitted dire
 - Compile it.
 
 ## Project template
-Here is a windows driver example: [[link]](https://github.com/gmh5225/LLVMWindowsDriverTest)
+Here is a Visual Studio windows driver example: [[link]](https://github.com/gmh5225/LLVMWindowsDriverTest)
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LLVMDriverTest.png)
 
 
-Here is a simple cmkr windows driver template: [[link]](https://github.com/NewWorldComingSoon/llvm-msvc-windows-driver-template)
+Here is a cmkr windows driver template: [[link]](https://github.com/NewWorldComingSoon/llvm-msvc-windows-driver-template)
 
 ![image](https://github.com/NewWorldComingSoon/llvm-msvc-build/assets/13917777/2da39155-1232-4cc4-9ce1-f35d08d2a685)
 
