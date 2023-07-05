@@ -1,8 +1,6 @@
 
 # `llvm-msvc-build`
 
-![Funny GIF](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnRxanl4MG5jZXU0aTkwNmdxNzZvZTA4NnM5ZXJ6eHV2MmMzZWl5dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4AbBz6pVGkyV6McOua/giphy.gif)
-
 [![GitHub license](https://img.shields.io/github/license/NewWorldComingSoon/llvm-msvc-build)](https://github.com/NewWorldComingSoon/llvm-msvc-build/blob/main/LICENSE)
 [![Github All Releases](https://img.shields.io/github/downloads/NewWorldComingSoon/llvm-msvc-build/total.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 [![GitHub release](https://img.shields.io/github/release/NewWorldComingSoon/llvm-msvc-build.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
