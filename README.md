@@ -12,8 +12,7 @@ Because there are more hacky operations, a lot of code can not be submitted dire
 
 ## Features:
 - SEH support.
-- [Compatible with MSVC syntax as much as possible.](https://github.com/gmh5225/llvm-msvc-compatibility
-)
+- Compatible with MSVC syntax as much as possible.
 - Windows Driver support.(Now only X64)
 - Intrinsic support.
 - Naked X64 inline asm support.
