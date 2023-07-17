@@ -15,7 +15,7 @@ Because there are more hacky operations, a lot of code can not be submitted dire
 - [Compatible with MSVC syntax as much as possible.](https://github.com/gmh5225/llvm-msvc-compatibility
 )
 - Windows Driver support.(Now only X64)
-- [Intrinsic support.](https://github.com/gmh5225/LLVMIntrinsicRewrite)
+- Intrinsic support.
 - Naked X64 inline asm support.
 
 ## How to use llvm-msvc?
