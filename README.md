@@ -5,6 +5,8 @@
 [![Github All Releases](https://img.shields.io/github/downloads/NewWorldComingSoon/llvm-msvc-build/total.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 [![GitHub release](https://img.shields.io/github/release/NewWorldComingSoon/llvm-msvc-build.svg)](https://github.com/NewWorldComingSoon/llvm-msvc-build/releases) 
 
+This project migrated to https://github.com/backengineering/llvm-msvc
+
 ## What's llvm-msvc?
 A [project](https://github.com/NewWorldComingSoon/llvm-msvc) that forked LLVM focused on MSVC Compatibility.
 
