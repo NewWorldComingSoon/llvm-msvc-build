@@ -42,4 +42,6 @@ If you don't know how to learn LLVM, you can check out this [repository](https:/
 ## Issues
 If you have any questions, please tell me or send [issues](https://github.com/NewWorldComingSoon/llvm-msvc-issues/issues)
 
+## Credits
+- LLVM
 
