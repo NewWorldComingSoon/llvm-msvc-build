@@ -44,4 +44,5 @@ If you have any questions, please tell me or send [issues](https://github.com/Ne
 
 ## Credits
 - LLVM
+- Some anonymous people
 
